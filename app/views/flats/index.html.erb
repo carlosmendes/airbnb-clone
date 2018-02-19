@@ -1,0 +1,5 @@
+<h1>Flats (<%= @flats.count %>)</h1>
+
+<% @flats.each_with_index do |flat, index| %>
+  <div><%= flat['price'] %>€: <%= link_to flat['name'], show_path(index + 1)%></div>
+<% end %>
